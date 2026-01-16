@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WHAT YOU LOOKING UP HERE FOR?</title>
+        <style>
+            body {background: linear-gradient(#5F2568);
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                text-align: center;
+                padding: 50px;
+                color: #333;}
+            h1 {font-size: 3em;
+                color: #ff4081;}
+            p {font-size: 1.8em;
+                color: #d3d3d3;}
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+                max-width: 1300px;
+                margin: 0 auto;
+            }
+            .gallery img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Here you go, You horny bitch</h1>
+        <div class="gallery">
+            <img src="0ba5aa05b0c71d2c5a484700a132116b.jpg" alt="Image 1">
+            <img src="0f1588b36b85cd3d0151191e3c3c96ac.jpg" alt="Image 2">
+            <img src="1f691e9b47f03e80c449e81c85c48d11.jpg" alt="Image 3">
+            <img src="1f974665761bbb735f45b697247b374f.jpg" alt="Image 4">
+            <img src="31f86f9bb83535bc82ef19d4d86d9a49.jpg" alt="Image 5">
+            <img src="54b6467f2f908c2ed89d254d87567a5f.jpg" alt="Image 6">
+            <img src="5c9c986831de0b2cc859ab19fdc270e1.jpg" alt="Image 7">
+            <img src="61372c0e95b2b500ab99a6ba8839e939.jpg" alt="Image 9">
+            <img src="64c892dd1bb030ea08976fa1c1379c7b.jpg" alt="Image 10">
+            <img src="6918d9aa8aad5ba930e7cdb2d897cec2.jpg" alt="Image 12">
+            <img src="6cbb3f09b85154ce8550ebcc7b50fe3e.jpg" alt="Image 13">
+            <img src="6ddb97a41a978c9a3b296a8d8a142778.jpg" alt="Image 14">
+            <img src="6ef756c8b600f0a6bec99e94790095d5.jpg" alt="Image 15">
+            <img src="78d13f9a1bb294833b379ba861d08830.jpg" alt="Image 16">
+            <img src="7fcee059fbbde09ee31c74bcd645d866.jpg" alt="Image 17">
+            <img src="8f5fa17d1941e1556876cb3c366916fc.jpg" alt="Image 18">
+            <img src="a5a074e24e1c004d9cb29d59b7b22dc1.jpg" alt="Image 19">
+            <img src="b54bd87a5c29bb24d15c3098cf53056f.jpg" alt="Image 20">
+            <img src="c5df238c82c7701a987d99e25ce0e63f.jpg" alt="Image 21">
+            <img src="c9a2d16abe61165ce2f0506fd1f11886.jpg" alt="Image 22">
+            <img src="d53f2f7278454f14015e52b0943f800f.jpg" alt="Image 23">
+            <img src="da046d3ace9f0534873e0535a3a7540d.jpg" alt="Image 24">
+            <img src="f433258e93280ac47340d9b47800839c.jpg" alt="Image 25">
+        </div>
+        <p> Now gimme a damn call would ya???</p>
+        <script>
+            const gallery = document.querySelector('.gallery');
+            const images = Array.from(gallery.children);
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+            const shuffled = shuffle(images);
+            gallery.innerHTML = '';
+            shuffled.forEach(img => gallery.appendChild(img));
+        </script>
+    </body>
+</html>

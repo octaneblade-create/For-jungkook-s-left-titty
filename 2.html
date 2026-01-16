@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Happy Birthday!</title>
+        <style>
+            body {background: linear-gradient(#5F2568);
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                text-align: center;
+                padding: 50px;
+                color: #333;}
+            h1 {font-size: 3em;
+                color: #ff4081;}
+            p {font-size: 1.8em;
+                color: #d3d3d3;}
+            .particle-left {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: rgba(255, 64, 129, 0.7);
+                border-radius: 50%;
+                animation: flyLeft 5s linear infinite;
+            }
+            @keyframes flyLeft {
+                0% { left: -8px; top: 10%; }
+                100% { left: 100%; top: 90%; }
+            }
+            .particle-right {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: rgba(255, 64, 129, 0.7);
+                border-radius: 50%;
+                animation: flyRight 5s linear infinite;
+            }
+            @keyframes flyRight {
+                0% { left: calc(100% + 8px); top: 10%; }
+                100% { left: -8px; top: 90%; }
+            }
+            .fancy-btn {
+                background: linear-gradient(45deg, #ff4081, #5F2568, #ff4081, #5F2568);
+                background-size: 400% 400%;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                font-size: 1.2em;
+                font-family: 'Comic Sans MS', cursive;
+                border-radius: 25px;
+                cursor: pointer;
+                margin-top: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+                transition: all 0.3s ease;
+                animation: gradientShift 3s ease-in-out infinite;
+            }
+            .fancy-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 12px rgba(255, 64, 129, 0.5), 0 0 20px rgba(255, 64, 129, 0.3);
+            }
+            @keyframes gradientShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Happy Birthday baeeeeeee!</h1>
+        <p>May you have a day filled with well a lil bit of damn peace, cause if you have peace so i'll have peace and all your favorite things!( P.S. JUNGKOOK)</p>
+        <p>May this year bring you money and well happiness sureeee and a trip to btsssssssssssssss, and to wonderful memories too with me offc aint nobody else. Gotta gatekeep my bae, can't be baeless, lots of baestealers out there.</p>
+        <div class="particle-left"></div>
+        <div class="particle-left" style="animation-delay: 1s;"></div>
+        <div class="particle-left" style="animation-delay: 2s;"></div>
+        <div class="particle-right"></div>
+        <div class="particle-right" style="animation-delay: 1s;"></div>
+        <div class="particle-right" style="animation-delay: 2s;"></div>
+        <div class="particle-left" style="background: rgba(255, 0, 0, 0.7); animation-delay: 0.5s;"></div>
+        <div class="particle-left" style="background: rgba(0, 255, 0, 0.7); animation-delay: 1.5s;"></div>
+        <div class="particle-right" style="background: rgba(0, 0, 255, 0.7); animation-delay: 0.5s;"></div>
+        <div class="particle-right" style="background: rgba(255, 255, 0, 0.7); animation-delay: 1.5s;"></div>
+        <div class="particle-left" style="background: rgba(255, 165, 0, 0.7); animation-delay: 2.5s;"></div>
+        <div class="particle-right" style="background: rgba(128, 0, 128, 0.7); animation-delay: 2.5s;"></div>
+        <script>
+            const particles = document.querySelectorAll('.particle-left, .particle-right');
+            particles.forEach(particle => {
+                particle.style.animation = 'none';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+            });
+            setInterval(() => {
+                particles.forEach(particle => {
+                    let left = parseFloat(particle.style.left);
+                    let top = parseFloat(particle.style.top);
+                    left += (Math.random() - 0.5) * 2.5;
+                    top += (Math.random() - 0.5) * 2.5;
+                    if (left < 0) left = 0;
+                    if (left > 100) left = 100;
+                    if (top < 0) top = 0;
+                    if (top > 100) top = 100;
+                    particle.style.left = left + '%';
+                    particle.style.top = top + '%';
+                });
+            }, 50);
+        </script>
+        <img src ="5f968e7f7a89244ee8eea19a0388f6c3.jpg"; style="width: 400px; height: 400px; border-radius:15px; margin-top:20px;">
+        <br>
+        <button class="fancy-btn" onclick="window.location.href='3.html'">And for my gift.............. Well....</button>
+    </body>
+</html>
